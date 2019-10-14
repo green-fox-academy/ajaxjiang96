@@ -1,12 +1,12 @@
-  'use strict';
+'use strict'
 
-let a = 123;
-let b = 526;
+let a = 123
+let b = 526
 
 // Swap the values of these variables
-let c = b;
-b = a;
-a = c;
+const c = b
+b = a
+a = c
 
-console.log(a);
-console.log(b);
+console.log(a)
+console.log(b)

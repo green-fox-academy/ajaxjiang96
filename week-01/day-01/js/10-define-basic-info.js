@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 // Define several things as a variable, then print their values
 // Your name as a string
@@ -6,7 +6,7 @@
 // Your height in meters as a float
 // Whether you are married or not as a boolean
 
-let name = "Ajax Jiang";
-let age = 23;
-let height = 1.74
-let married = false
+const name = 'Ajax Jiang'
+const age = 23
+const height = 1.74
+const married = false
