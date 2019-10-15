@@ -1,6 +1,5 @@
-'use strict'
 
-const number = 15
+const number = 15;
 
 // Create a program that
 // prints the multiplication table with number
@@ -19,4 +18,4 @@ const number = 15
 // 9 * 15 = 135
 // 10 * 15 = 150
 
-for (let i = 1; i <= 10; i++) console.log(`${i} * ${number} = ${number * i}`)
+for (let i = 1; i <= 10; i += 1) console.log(`${i} * ${number} = ${number * i}`);
