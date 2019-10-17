@@ -8,7 +8,8 @@ class Ship {
 
   fillShip() {
     this.captain = new Pirate();
-    this.crew = [...Array(Math.floor(Math.random() * 100))].map(() => new Pirate());
+    this.crew = [...Array(Math.ceil(Math.random() * 4))].map(() => new Pirate());
+    this.initialCrewCount = this.crew.length;
   }
 
   battle(otherShip) {
@@ -23,15 +24,18 @@ class Ship {
   }
 
   lose() {
-    const lostCrewNumber = Math.random() * this.aliveCount;
+    const lostCrewNumber = Math.ceil(Math.random() * this.aliveCrewCount);
     for (let i = 0; i < lostCrewNumber; i += 1) {
-      this.crew.pop();
+      this.crew[i].die();
     }
+    console.log(`${lostCrewNumber} crew died in this battle`);
+    // console.log("crew", this.crew);
   }
 
   party() {
     this.captain.drinkSomeRum();
-    this.crew = this.crew.forEach((c) => c.drinkSomeRum());
+    this.captain.howsItGoingMate();
+    this.crew.forEach((c) => c.drinkSomeRum() && c.howsItGoingMate());
   }
 
   get score() {
@@ -39,22 +43,25 @@ class Ship {
   }
 
   get aliveCrewCount() {
-    return this.crew.filter((x) => x.alive).length;
+    return this.crew ? this.crew.filter((x) => x.alive).length : 0;
   }
 
   print() {
     const capState = `${this.captain.state}`.padEnd(15, ' ');
+    // const capDrinkRounded = Math.round(this.captain.drinks * 100) / 100;
+    const capDrink = `${this.captain.drinks}`.padEnd(4, ' ');
     const aliveCount = `${this.aliveCrewCount}`.padEnd(3, ' ');
+    const initCrew = `${this.initialCrewCount}`.padEnd(3, ' ');
     console.log(
       `                   +---------+  +
   Ship             |         +--+--+
                    |         | |+|
                    |        ++------+
                    +--------+       |
-+-Captain----------+-----+  |       |    +-Crew-------+
-| Drinks: ${this.captain.drinks}              |  |       |    | Alive: ${aliveCount} |
-| State : ${capState}|  +-------+    +------------+
-+-----------------------++  |       |
++-Captain----------+------+ |       |    +-Crew------------+
+| Drinks: ${capDrink}            | |       |    | Alive: ${aliveCount}/ ${initCrew} |
+| State : ${capState} | +-------+    +-----------------+
++-------------------------+ |       |
       o            |        |       |  +-------+
       --           |        |       |  |       |
       ||           +---+-+--+--+-+--++-+-----------+

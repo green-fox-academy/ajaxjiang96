@@ -9,7 +9,7 @@ module.exports = class Pirate {
     if (this.dead) {
       console.log('he\'s dead');
     } else {
-      this.drinks += Math.random();
+      this.drinks += 1;
     }
   }
 
