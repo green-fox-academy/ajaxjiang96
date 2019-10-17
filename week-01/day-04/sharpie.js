@@ -16,7 +16,11 @@ class Sharpie {
   }
 
   use() {
-    this.inkAmount -= 1;
+    this.inkAmount -= this.usable ? 1 : 0;
+  }
+
+  get usable() {
+    return this.inkAmount > 0;
   }
 }
 module.exports = Sharpie;
