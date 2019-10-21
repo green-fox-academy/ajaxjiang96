@@ -1,7 +1,7 @@
 "use strict";
 
 export abstract class Instrument {
-  public name: string;
+  protected name: string;
   constructor(name: string) {
     this.name = name;
   }
