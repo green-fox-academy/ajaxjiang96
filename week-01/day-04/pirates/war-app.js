@@ -35,5 +35,4 @@ class WarApp {
   }
 }
 
-const war = new WarApp();
-war.main();
+module.exports = WarApp;
