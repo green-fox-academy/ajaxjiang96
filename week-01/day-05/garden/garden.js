@@ -20,10 +20,10 @@ class Garden {
     this.checkPlants();
   }
 
-  water(amout) {
-    console.log(`Watering with ${amout}`);
+  water(amount) {
+    console.log(`Watering with ${amount}`);
     const thirstyPlantNum = this.plants.filter((plant) => plant.needsWater).length;
-    const avgWaterAmount = amout / thirstyPlantNum;
+    const avgWaterAmount = amount / thirstyPlantNum;
     this.plants.forEach((plant) => (plant.needsWater ? plant.water(avgWaterAmount) : null));
   }
 
