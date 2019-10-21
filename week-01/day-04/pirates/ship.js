@@ -10,8 +10,8 @@ class Ship {
 
   fillShip() {
     this.captain = new Pirate();
-    this.crew = [...Array(Math.ceil(Math.random() * 4))].map(() => new Pirate());
-    this.initialCrewCount = this.crew.length;
+    this.initialCrewCount = Math.ceil(Math.random() * 4);
+    this.crew = [...Array(this.initialCrewCount)].map(() => new Pirate());
   }
 
   battle(otherShip) {
@@ -41,7 +41,7 @@ class Ship {
   }
 
   get score() {
-    return this.aliveCrewCount - this.captain.drinks;
+    return this.aliveCrewCount - this.captain.consumedBottles;
   }
 
   get aliveCrewCount() {
@@ -50,8 +50,7 @@ class Ship {
 
   print() {
     const capState = `${this.captain.state}`.padEnd(15, ' ');
-    // const capDrinkRounded = Math.round(this.captain.drinks * 100) / 100;
-    const capDrink = `${this.captain.drinks}`.padEnd(4, ' ');
+    const capDrink = `${this.captain.consumedBottles}`.padEnd(4, ' ');
     const aliveCount = `${this.aliveCrewCount}`.padEnd(3, ' ');
     const initCrew = `${this.initialCrewCount}`.padEnd(3, ' ');
     console.log(
