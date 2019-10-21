@@ -30,6 +30,7 @@ class Ship {
     for (let i = 0; i < lostCrewNumber; i += 1) {
       this.crew[i].die();
     }
+    this.crew.sort((crew1) => crew1.isDead);
     console.log(`${lostCrewNumber} crew died in this battle`);
     // console.log("crew", this.crew);
   }
@@ -41,11 +42,11 @@ class Ship {
   }
 
   get score() {
-    return this.aliveCrewCount - this.captain.consumedBottles;
+    return Math.max(this.aliveCrewCount - this.captain.consumedBottles, 0);
   }
 
   get aliveCrewCount() {
-    return this.crew.filter((x) => x.alive).length;
+    return this.crew.filter((x) => x.isAlive).length;
   }
 
   print() {

@@ -3,14 +3,20 @@
 const Ship = require('./ship');
 
 class Armada {
-  constructor() {
+  constructor(name = 'Armada') {
+    this.name = name;
     this.ships = [];
   }
 
   fillShips() {
-    this.ships = [...Array(Math.ceil(Math.random() * 50))]
+    this.shipCount = Math.ceil(Math.random() * 50);
+    this.ships = [...Array(this.shipCount)]
       .map(() => new Ship());
     this.ships.forEach((ship) => ship.fillShip());
+  }
+
+  returnShip(ship) {
+    this.ships.push(ship);
   }
 
   get hasShip() {
@@ -21,20 +27,16 @@ class Armada {
     while (this.hasShip && other.hasShip) {
       this.battle(other);
     }
-
-    if (this.hasShip) {
-      return true;
-    }
-    return false;
+    return this.hasShip;
   }
 
   battle(other) {
     const ourShip = this.ships.pop(0);
     const theirShip = other.ships.pop(0);
     if (ourShip.battle(theirShip)) {
-      this.ships.push(ourShip);
+      this.returnShip(ourShip);
     } else {
-      other.ships.push(theirShip);
+      other.returnShip(theirShip);
     }
   }
 

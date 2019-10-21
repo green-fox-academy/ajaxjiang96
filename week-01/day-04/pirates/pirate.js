@@ -50,7 +50,7 @@ module.exports = class Pirate {
     }
   }
 
-  get alive() {
+  get isAlive() {
     return !this.isDead;
   }
 
