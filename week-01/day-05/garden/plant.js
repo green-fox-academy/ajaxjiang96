@@ -25,7 +25,7 @@ class Plant {
     console.log(
       this.needsWater
         ? `The ${this.color} ${this.name} needs water`
-        : `The ${this.color} ${this.name} doesnt need water`,
+        : `The ${this.color} ${this.name} doesn't need water`,
     );
   }
 }

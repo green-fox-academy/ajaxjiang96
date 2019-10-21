@@ -4,7 +4,7 @@
 // Add " - Download games" to the end of the todoText
 // Add " - Diablo" to the end of the todoText but with indention
 
-// Expected outpt:
+// Expected output:
 
 // My todo:
 //  - Buy milk
