@@ -23,8 +23,7 @@ class Aircraft {
   }
 
   fight() {
-    const ammo = this.useAmmo();
-    return ammo * this.baseDamage;
+    return this.useAmmo() * this.baseDamage;
   }
 
   refill(amount) {
@@ -43,7 +42,7 @@ class Aircraft {
   }
 
   getStatus() {
-    console.log(`Type ${this.getType()}, Ammo: ${this.ammo}, Base Damage: ${this.baseDamage}, All Damage: ${this.totalDmg}`);
+    return `Type ${this.getType()}, Ammo: ${this.ammo}, Base Damage: ${this.baseDamage}, All Damage: ${this.totalDmg}`;
   }
 }
 

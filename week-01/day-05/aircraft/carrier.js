@@ -1,8 +1,5 @@
 'use strict';
 
-const F16 = require('./f16');
-const F35 = require('./f35');
-
 class Carrier {
   constructor(ammo = 0, hp = 100) {
     this.aircrafts = [];
@@ -20,7 +17,11 @@ class Carrier {
   }
 
   fill() {
-    this.aircrafts.forEach((a) => { this.ammo = a.refill(this.ammo); });
+    if (this.ammo > 0) {
+      this.aircrafts.forEach((a) => { this.ammo = a.refill(this.ammo); });
+    } else {
+      throw new Error('Out of Ammo');
+    }
   }
 
   fight(other) {
@@ -35,46 +36,11 @@ class Carrier {
   }
 
   getStatus() {
-    console.log(this.hp <= 0
-      ? 'It\'s dead Jim : ('
+    return this.hp <= 0
+      ? 'It\'s dead Jim :('
       : `HP: ${this.hp}, Aircraft count: ${this.aircrafts.length}, Ammo Storage: ${this.ammo}, Total damage: ${this.totalDmg}
-Aircrafts:`);
-    this.aircrafts.forEach((a) => a.getStatus());
+Aircrafts:${this.aircrafts.map((a) => a.getStatus()).join('\n')}`;
   }
 }
 
 module.exports = Carrier;
-
-const a = new Carrier(2300, 5000);
-a.add(new F16());
-a.add(new F16());
-a.add(new F35());
-a.add(new F35());
-a.add(new F35());
-a.getStatus();
-a.fill();
-a.getStatus();
-
-const b = new Carrier(2300, 5000);
-b.add(new F16());
-b.add(new F16());
-b.add(new F35());
-b.add(new F35());
-b.add(new F35());
-
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
-a.fight(b);
-a.getStatus();
