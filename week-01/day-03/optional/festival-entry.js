@@ -2,7 +2,7 @@
 
 const watchlist = [];
 
-let securityAlcholLoot = 0;
+const securityAlcholLoot = 0;
 
 const queue = [
   { name: 'Amanda', alcohol: 10, guns: 1 },
@@ -11,7 +11,7 @@ const queue = [
   { name: 'Wade', alcohol: 1, guns: 1 },
   { name: 'Anna', alcohol: 10, guns: 0 },
   { name: 'Rob', alcohol: 2, guns: 0 },
-  { name: 'Joerg', alcohol: 20, guns: 0 }
+  { name: 'Joerg', alcohol: 20, guns: 0 },
 ];
 
 // Queue of festivalgoers at entry

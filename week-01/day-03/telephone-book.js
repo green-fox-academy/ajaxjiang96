@@ -1,3 +1,5 @@
+'use strict';
+
 const telephoneBook = {
   'William A.Lathan': '405-709-1865',
   'John K.Miller': '402-247-8568',

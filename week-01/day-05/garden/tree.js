@@ -1,3 +1,5 @@
+'use strict';
+
 const Plant = require('./plant');
 
 class Tree extends Plant {

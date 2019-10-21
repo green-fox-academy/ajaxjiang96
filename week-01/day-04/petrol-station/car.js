@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = class Car {
   constructor() {
     this.gasAmout = 0;

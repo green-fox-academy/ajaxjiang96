@@ -1,3 +1,4 @@
+'use strict';
 
 // - Create a two dimensional list
 //   which can contain the different shades of specified colors

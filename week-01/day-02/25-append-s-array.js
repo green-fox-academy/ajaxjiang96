@@ -1,3 +1,4 @@
+'use strict';
 
 // - Create a variable named `animals`
 //   with the following content: `['dog', 'cat', 'kitten']`

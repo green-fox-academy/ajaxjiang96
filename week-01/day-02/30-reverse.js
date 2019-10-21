@@ -1,3 +1,4 @@
+'use strict';
 
 // - Create a variable named `aj`
 //   with the following content: `[3, 4, 5, 6, 7]`

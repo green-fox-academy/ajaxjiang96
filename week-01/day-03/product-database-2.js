@@ -1,3 +1,5 @@
+'use strict';
+
 const products = {
   Eggs: 200,
   Milk: 200,

@@ -1,3 +1,5 @@
+'use strict';
+
 /* Animal
  *
  * Create an Animal class

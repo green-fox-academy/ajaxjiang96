@@ -1,3 +1,5 @@
+"use strict";
+
 export default abstract class Vehicle {
   public fuelAmount: number;
   public seatCount: number;

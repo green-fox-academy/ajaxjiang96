@@ -1,3 +1,5 @@
+'use strict';
+
 /* Create a map where the keys are strings and the values are strings with
   the following initial values:
 

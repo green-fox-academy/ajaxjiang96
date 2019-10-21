@@ -1,3 +1,5 @@
+'use strict';
+
 // - Create a variable named `p1`
 //   with the following content: `[1, 2, 3]`
 // - Create a variable named `p2`

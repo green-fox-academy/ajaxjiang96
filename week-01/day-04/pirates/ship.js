@@ -1,3 +1,5 @@
+'use strict';
+
 const Pirate = require('./pirate');
 
 class Ship {

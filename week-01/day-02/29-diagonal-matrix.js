@@ -1,3 +1,4 @@
+'use strict';
 
 // - Create (dynamically*) a two dimensional list
 //   with the following matrix**. Use a loop!

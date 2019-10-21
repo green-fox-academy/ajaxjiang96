@@ -1,3 +1,5 @@
+'use strict';
+
 const Car = require('./car');
 
 class Station {
@@ -9,7 +11,6 @@ class Station {
     this.gasAmount -= car.refill(this.gasAmount);
   }
 }
-
 
 const station = new Station();
 const car = new Car();

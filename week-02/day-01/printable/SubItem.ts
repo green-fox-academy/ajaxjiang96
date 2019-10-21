@@ -1,3 +1,5 @@
+"use strict";
+
 import IPrintable from "./IPrintable";
 
 export default class SubItem implements IPrintable {

@@ -1,3 +1,5 @@
+'use strict';
+
 class Plant {
   constructor(color, targetWaterLevel = 100, coefficient = 1.0) {
     this.color = color;

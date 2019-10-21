@@ -1,3 +1,5 @@
+"use strict";
+
 import IPrintable from "../printable/IPrintable";
 
 interface IReservationy {

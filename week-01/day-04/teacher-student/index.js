@@ -1,3 +1,5 @@
+'use strict';
+
 /* Teacher Student
 
 Create Student and Teacher classes

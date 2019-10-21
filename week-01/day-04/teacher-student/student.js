@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable class-methods-use-this */
 // const Teacher = require('./teacher');
 

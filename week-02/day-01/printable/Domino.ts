@@ -1,3 +1,5 @@
+"use strict";
+
 import IPrintable from "./IPrintable";
 
 class Domino implements IPrintable {

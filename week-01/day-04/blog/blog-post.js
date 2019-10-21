@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-unused-vars */
 class BlogPost {
   constructor(authorName, title, text, publicationDate) {

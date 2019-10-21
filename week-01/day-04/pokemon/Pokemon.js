@@ -1,3 +1,5 @@
+'use strict';
+
 class Pokemon {
   constructor(name, type, effectiveAgainst) {
     this.name = name;

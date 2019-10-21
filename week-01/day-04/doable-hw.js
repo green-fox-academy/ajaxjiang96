@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-unused-vars */
 const tree1 = {
   type: 'groot',
@@ -33,7 +35,6 @@ const tree5 = {
   age: 18,
   sex: 'female',
 };
-
 
 class Tree {
   constructor(name, leafColor = 'green', age, sex) {

@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-unused-vars */
 
 // Define several things as a variable, then print their values

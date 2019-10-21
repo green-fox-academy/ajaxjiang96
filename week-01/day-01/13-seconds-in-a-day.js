@@ -1,3 +1,4 @@
+'use strict';
 
 const currentHours = 14;
 const currentMinutes = 34;

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = class Pirate {
   constructor() {
     this.drinks = 0;

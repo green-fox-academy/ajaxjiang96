@@ -1,3 +1,5 @@
+'use strict';
+
 const Sharpie = require('./sharpie');
 
 class SharpieSet {

@@ -1,3 +1,5 @@
+'use strict';
+
 // Create an empty map where the keys are integers and the values are characters
 const myMap = {};
 

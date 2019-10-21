@@ -1,3 +1,5 @@
+'use strict';
+
 const Armada = require('./armada');
 
 class WarApp {

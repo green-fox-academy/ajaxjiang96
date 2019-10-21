@@ -1,3 +1,5 @@
+'use strict';
+
 const Animal = require('./animal');
 
 /* Farm

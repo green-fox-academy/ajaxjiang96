@@ -1,3 +1,4 @@
+'use strict';
 
 let a = 123;
 let b = 526;

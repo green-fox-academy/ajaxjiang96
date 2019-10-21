@@ -1,3 +1,5 @@
+'use strict';
+
 const F16 = require('./f16');
 const F35 = require('./f35');
 

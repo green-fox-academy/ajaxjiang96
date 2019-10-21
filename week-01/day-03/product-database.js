@@ -1,3 +1,5 @@
+'use strict';
+
 // Create a map with the following key-value pairs.
 const products = {
   Eggs: 200,

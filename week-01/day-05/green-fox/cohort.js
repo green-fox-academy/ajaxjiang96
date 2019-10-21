@@ -1,3 +1,5 @@
+'use strict';
+
 class Cohort {
   constructor(name) {
     this.name = name;

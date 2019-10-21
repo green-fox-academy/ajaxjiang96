@@ -1,3 +1,5 @@
+'use strict';
+
 /* Sharpie
 
 Create Sharpie class

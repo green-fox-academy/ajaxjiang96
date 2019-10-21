@@ -1,3 +1,5 @@
+'use strict';
+
 /* Blog
 
 Reuse your BlogPost class

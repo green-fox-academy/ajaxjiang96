@@ -1,3 +1,4 @@
+'use strict';
 
 // - Create a variable named `am` and assign the value `dog` to it
 // - Write a function called `appendS` that gets a string as an input

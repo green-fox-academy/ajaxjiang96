@@ -1,3 +1,5 @@
+"use strict";
+
 import IFlyable from "./Flyable";
 
 import Animal from "../zoo/Animal";

@@ -1,4 +1,4 @@
-import Domino from "../../../week-01/day-04/domino/domino";
+"use strict";
 
 export default interface IPrintable {
   printAllFields(): void;

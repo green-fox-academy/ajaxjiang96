@@ -1,3 +1,5 @@
+"use strict";
+
 import Domino from "./Domino";
 import Todo from "./Todo";
 

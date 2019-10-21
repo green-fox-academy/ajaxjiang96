@@ -1,3 +1,5 @@
+'use strict';
+
 class Aircraft {
   constructor(maxAmmo = 0, baseDamage = 0, priority = false) {
     this.maxAmmo = maxAmmo;

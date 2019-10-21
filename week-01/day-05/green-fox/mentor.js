@@ -1,3 +1,5 @@
+'use strict';
+
 const Person = require('./person');
 
 class Mentor extends Person {

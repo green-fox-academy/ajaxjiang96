@@ -1,3 +1,5 @@
+'use strict';
+
 const AirCraft = require('./aircraft');
 
 class F35 extends AirCraft {

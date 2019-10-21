@@ -1,3 +1,4 @@
+'use strict';
 
 // - Create an array variable named `ag` with the following content:
 // `['Gin', 'Whiskey', 'Wine', 'Beer']`

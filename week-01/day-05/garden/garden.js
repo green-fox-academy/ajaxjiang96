@@ -1,6 +1,7 @@
+'use strict';
+
 const Flower = require('./flower');
 const Tree = require('./tree');
-
 
 class Garden {
   constructor() {

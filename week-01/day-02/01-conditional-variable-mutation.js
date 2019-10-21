@@ -1,3 +1,4 @@
+'use strict';
 
 const a = 24;
 let out = 0;

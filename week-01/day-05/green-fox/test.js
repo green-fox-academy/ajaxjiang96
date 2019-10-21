@@ -1,3 +1,5 @@
+'use strict';
+
 const Person = require('./person');
 const Student = require('./student');
 const Mentor = require('./mentor');

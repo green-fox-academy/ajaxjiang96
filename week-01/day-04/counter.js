@@ -1,3 +1,5 @@
+'use strict';
+
 /* Counter
 
 Create a Counter class

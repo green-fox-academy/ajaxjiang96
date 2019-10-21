@@ -1,3 +1,4 @@
+'use strict';
 
 const favoriteNumber = 8;
 // Store your favorite number in a variable (as a number)

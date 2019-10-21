@@ -1,4 +1,5 @@
 'use strict';
+
 // Create a simple calculator application which does read the parameters from the standard input
 // and prints the result to the console.
 

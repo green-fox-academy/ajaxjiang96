@@ -1,3 +1,5 @@
+'use strict';
+
 const Ship = require('./ship');
 
 class Armada {

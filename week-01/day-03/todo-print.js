@@ -11,7 +11,6 @@
 //  - Download games
 //      - Diablo
 
-
 let todoText = ' - Buy milk\n';
 todoText = `My todo:\n${todoText}`;
 todoText += ' - Download games\n';
