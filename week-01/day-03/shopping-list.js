@@ -29,7 +29,7 @@ const alices = {
   Tomato: 10,
 };
 
-const totalCost = (shoppingList) => Object.keys(shoppingList)
+const totalCost = shoppingList => Object.keys(shoppingList)
   .map((item) => shoppingList[item] * products[item])
   .reduce((a, b) => a + b);
 // How much does Bob pay?
