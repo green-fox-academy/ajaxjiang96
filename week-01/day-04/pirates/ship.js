@@ -37,7 +37,7 @@ class Ship {
   party() {
     this.captain.drinkSomeRum();
     this.captain.howsItGoingMate();
-    this.crew.forEach((c) => c.drinkSomeRum() && c.howsItGoingMate());
+    this.crew.forEach((crewMember) => crewMember.drinkSomeRum() && crewMember.howsItGoingMate());
   }
 
   get score() {
@@ -45,7 +45,7 @@ class Ship {
   }
 
   get aliveCrewCount() {
-    return this.crew ? this.crew.filter((x) => x.alive).length : 0;
+    return this.crew.filter((x) => x.alive).length;
   }
 
   print() {
