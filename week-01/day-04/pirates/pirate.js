@@ -2,23 +2,23 @@
 
 module.exports = class Pirate {
   constructor() {
-    this.drinks = 0;
+    this.consumedBottles = 0;
     this.passedOut = false;
-    this.dead = false;
+    this.isDead = false;
   }
 
   drinkSomeRum() {
-    if (this.dead) {
+    if (this.isDead) {
       console.log('he\'s dead');
     } else {
-      this.drinks += 1;
+      this.consumedBottles += 1;
     }
   }
 
   howsItGoingMate() {
-    if (this.dead) {
+    if (this.isDead) {
       console.log('he\'s dead');
-    } else if (this.drinks <= 4) {
+    } else if (this.consumedBottles <= 4) {
       console.log('Pour me anudder!');
     } else {
       console.log('Arghh, I\'ma Pirate. How d\'ya d\'ink its goin?');
@@ -31,11 +31,11 @@ module.exports = class Pirate {
   }
 
   die() {
-    this.dead = true;
+    this.isDead = true;
   }
 
   brawl(x) {
-    if (!this.dead) {
+    if (!this.isDead) {
       const chance = Math.random();
       if (chance <= 1 / 3) {
         this.die();
@@ -51,11 +51,11 @@ module.exports = class Pirate {
   }
 
   get alive() {
-    return !this.dead;
+    return !this.isDead;
   }
 
   get state() {
-    if (this.dead) return 'dead';
+    if (this.isDead) return 'dead';
     if (this.passedOut) return 'passed out';
     return 'alive and awake';
   }
