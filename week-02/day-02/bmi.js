@@ -1,3 +1,5 @@
+'use strict';
+
 function calculateBMI(bodyInfo) {
   return {
     ...bodyInfo,
