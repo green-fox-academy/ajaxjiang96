@@ -8,7 +8,7 @@ function MySet(size = 0) {
 MySet.prototype = Object.create(Array.prototype);
 MySet.prototype.constructor = MySet;
 MySet.prototype.add = function (value) {
-  if (Array.prototype.indexOf.call(this, value) === -1) Array.prototype.push.call(this, value);
+  if (this.indexOf(value) === -1) this.push(value);
 };
 MySet.prototype.includes = function (value) {
   return this.indexOf(value) !== -1;
