@@ -1,3 +1,5 @@
+'use strict';
+
 export default class Garden {
   constructor(width, length) {
     this.width = width;

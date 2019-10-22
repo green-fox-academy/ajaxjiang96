@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable func-names */
 function Garden(width, length) {
   this.width = width;

@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable func-names */
 const Garden = require('./garden-classic');
 
