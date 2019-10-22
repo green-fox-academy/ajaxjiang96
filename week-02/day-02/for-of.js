@@ -1,6 +1,6 @@
 'use strict';
 
-const data = [5, 1, 2, 9, 7, 3, 8];
+// const data = [5, 1, 2, 9, 7, 3, 8];
 
 const max = (nums) => {
   let localMax = -Infinity;
