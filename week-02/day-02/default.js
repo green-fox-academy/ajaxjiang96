@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-param-reassign */
 // default values before ES6
 function coffee(sugar = false, milk = false) {
