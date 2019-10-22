@@ -4,7 +4,7 @@
 const handler = {
   get(targetObject, field) {
     if (field === 'nextId') {
-      this.set(targetObject, field, targetObject[field] ? targetObject[field] + 1 : 1)
+      this.set(targetObject, field, targetObject[field] ? targetObject[field] + 1 : 1);
       return targetObject[field];
     }
     return undefined;
@@ -15,3 +15,5 @@ const handler = {
     }
   },
 };
+
+module.exports = handler;
