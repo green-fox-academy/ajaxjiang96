@@ -17,10 +17,10 @@ function frameFunction() {
   // write your code here\
   // eslint-disable-next-line prefer-arrow-callback,func-names
   multiPurposeFunction(function (param) {
-    return exampleNonAnonymFunction(param);
+    return param ** 2;
   });
 
-  multiPurposeFunction((param) => exampleNonAnonymFunction(param));
+  multiPurposeFunction((param) => param ** 2);
 }
 
 frameFunction();
