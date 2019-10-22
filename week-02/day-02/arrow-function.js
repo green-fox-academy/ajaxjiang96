@@ -1,3 +1,5 @@
+'use strict';
+
 function multiPurposeFunction(action) {
   if (action) {
     console.log(action(3));
