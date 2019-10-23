@@ -58,6 +58,7 @@ class MyLinkedList<T> implements ILinkedList<T> {
   }
 
   public remove(index: number): T {
+    if (index >= this.size()) { return null; }
     let i = 0;
     let curr = this.head.next;
     let prev = this.head;
