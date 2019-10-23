@@ -21,6 +21,6 @@ export default class MyLinkedStack<T> extends MyLinkedList<T> implements IStack<
     this.add(value);
   }
   public pop(): T {
-    return this.remove(this.size() - 1);
+    return this.remove(Math.max(this.size() - 1, 0));
   }
 }
