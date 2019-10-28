@@ -4,18 +4,26 @@ html {
   font-weight: normal;
 }
 
+body {
+  margin: 5px;
+
+}
+
 section {
-  border: 4px solid rgb(144, 203, 153);
+  border: 5px solid rgb(144, 203, 153);
   background: rgb(64, 143, 159);
   padding: 20px;
   color: rgb(33, 84, 100);
-  width: 300px;
+  width: 358px;
+  height: 142px;
 }
 
 section+section {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 h1 {
   font-size: 36px;
+  margin: 0;
+  font-weight: normal;
 }
