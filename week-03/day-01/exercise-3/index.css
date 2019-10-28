@@ -4,8 +4,12 @@ html {
   font-weight: normal;
 }
 
+body {
+  margin: 2px;
+}
+
 main {
-  width: 300px;
+  width: 380px;
 }
 
 .section-wrapper+.section-wrapper {
@@ -21,12 +25,13 @@ section {
   padding: 20px;
   color: white;
   text-align: center;
+  height: 128px;
 }
 
 
 
 .north {
-  background: salmon;
+  background: rgb(358, 88, 70);
 }
 
 .south {
@@ -35,4 +40,5 @@ section {
 
 h1 {
   font-size: 36px;
+  font-weight: normal;
 }
