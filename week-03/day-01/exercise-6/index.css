@@ -1,0 +1,31 @@
+html {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+
+
+h1 {
+  color: rgb(0, 36, 219);
+}
+
+h2 {
+  color: rgb(228, 168, 64);
+}
+
+main>ul>li {
+  color: rgb(0, 36, 219);
+  list-style-type: square;
+}
+
+.fruits>li:first-child {
+  color: red;
+}
+
+.fruits {
+  list-style-type: disc;
+}
+
+.vegetables {
+  list-style-type: decimal;
+}
