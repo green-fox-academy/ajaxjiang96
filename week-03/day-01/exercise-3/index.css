@@ -1,0 +1,38 @@
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+main {
+  width: 300px;
+}
+
+.section-wrapper+.section-wrapper {
+  margin-top: 5px;
+}
+
+.section-wrapper {
+  border: 14px solid rgb(80, 135, 236);
+}
+
+section {
+  background: rgb(64, 143, 159);
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+
+
+.north {
+  background: salmon;
+}
+
+.south {
+  background: rgb(181, 228, 229);
+}
+
+h1 {
+  font-size: 36px;
+}
