@@ -4,7 +4,28 @@ html {
   font-weight: normal;
 }
 
-p {
-  padding-left: 20px;
-  border-left: 2px solid black;
+
+h1 {
+  color: rgb(0, 36, 219);
+}
+
+h2 {
+  color: rgb(228, 168, 64);
+}
+
+main>ul>li {
+  color: rgb(0, 36, 219);
+  list-style-type: square;
+}
+
+.fruits>li:first-child {
+  color: red;
+}
+
+.fruits {
+  list-style-type: disc;
+}
+
+.vegetables {
+  list-style-type: decimal;
 }
