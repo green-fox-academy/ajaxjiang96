@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(225, 116, 126), rgb(201, 147, 86));
+  height: 100vh;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  box-sizing: border-box;
+  display: block;
+  width: 560px;
+  /* height: 520px; */
+  background: white;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 84px 55px 84px;
+  border-radius: 100px;
+  box-shadow: 40px 40px 10px #3333;
+}
+
+h1 {
+  font-size: 22px;
+  color: #555;
+  margin: 30px 0;
+}
+
+label {
+  display: block;
+  font-size: 9px;
+  margin: 14px 0;
+}
+
+form>a {
+  display: block;
+  text-align: end;
+  margin: 19px 0;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  background: linear-gradient(90deg, #eee, white);
+  border-radius: 100px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+  outline: 0;
+  /* border: 1px solid rgb(119, 161, 113); */
+
+}
+
+input[type=submit] {
+  all: unset;
+  display: block;
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: white;
+  background: #333;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, rgb(86, 146, 244), rgb(124, 236, 190));
+  margin-top: 20px;
+}
