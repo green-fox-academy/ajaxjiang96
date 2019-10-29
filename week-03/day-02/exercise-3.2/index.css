@@ -1,0 +1,39 @@
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  all: unset;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  /* justify-content: flex-end; */
+  background: rgb(255, 214, 42);
+
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  background: rgb(176, 42, 255);
+}
+
+.item+.item {
+  margin-left: 5px;
+}
