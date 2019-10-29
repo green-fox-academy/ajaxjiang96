@@ -1,0 +1,36 @@
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+}
+
+.green {
+  background: rgb(81, 212, 0);
+}
+
+.yellow {
+  background: rgb(255, 214, 42);
+}
+
+.purple {
+  background: rgb(176, 42, 255);
+}
