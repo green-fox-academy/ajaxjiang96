@@ -15,6 +15,13 @@ export interface INode<T> {
   next: INode<T>;
 }
 
+export interface IBinaryTreeNode<T> {
+  value: T;
+  left: IBinaryTreeNode<T>;
+  right: IBinaryTreeNode<T>;
+  add(value: T): boolean;
+}
+
 export interface IStack<T> {
   empty(): boolean;
   peek(): T;
