@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Workshop: innerHTML, textContent</title>
-  </head>
-  <body>
-    <ul>
-      <li>placeholder</li>
-      <li>placeholder</li>
-      <li>placeholder</li>
-      <li>placeholder</li>
-    </ul>
 
-    <!-- You can work in the html or in a separate js file. Like:
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: innerHTML, textContent</title>
+</head>
+
+<body>
+  <ul>
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+  </ul>
+
+  <!-- You can work in the html or in a separate js file. Like:
 
     <script>
       1) replace the list items' content with items from this list:
@@ -25,5 +27,22 @@
     OR
 
     <script src="content-2.js"></script> -->
-  </body>
+  <style>
+    .limegreen {
+      background: limegreen;
+    }
+  </style>
+
+  <script>
+    // 1) replace the list items ' content with items from this list: ['apple', 'banana', 'cat', 'dog']
+    const list = document.querySelectorAll('li');
+    const items = ['apple', 'banana', 'cat', 'dog'];
+    items.forEach((item, i) => list[i].innerText = item);
+    // 2) change the < ul > element 's background color to 'limegreen'
+    // - use css class to change the color instead of the style property
+    const ul = document.querySelector('ul');
+    ul.classList.add('limegreen')
+  </script>
+</body>
+
 </html>
