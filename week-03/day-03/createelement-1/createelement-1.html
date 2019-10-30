@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Workshop: CreateElement</title>
-  </head>
-  <body>
-    <ul class="asteroids">
-      <li id="b325" class="asteroid">The King</li>
-      <li class="asteroid b326">The Conceited Man</li>
-    </ul>
-    <div class="container"></div>
 
-    <!-- You can work in the html or in a separate js file. Like:
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: CreateElement</title>
+</head>
+
+<body>
+  <ul class="asteroids">
+    <li id="b325" class="asteroid">The King</li>
+    <li class="asteroid b326">The Conceited Man</li>
+  </ul>
+  <div class="container"></div>
+
+  <!-- You can work in the html or in a separate js file. Like:
 
     <script>
       Add an item that says 'The Green Fox' to the asteroid list.
@@ -26,5 +28,26 @@
     OR
 
     <script src="createelement-1.js"></script> -->
-  </body>
+  <script>
+    'use strict';
+
+    const greenFoxLi = document.createElement('li')
+    greenFoxLi.textContent = 'The Green Fox';
+    document.querySelector('.asteroids').appendChild(greenFoxLi)
+
+    const lamplighter = document.createElement('li')
+    lamplighter.textContent = 'The Lamplighter';
+    document.querySelector('.asteroids').appendChild(lamplighter)
+
+    const heading = document.createElement('h1')
+    heading.textContent = 'I can add elements to the DOM!'
+    document.querySelector('.container').appendChild(heading)
+
+    const img = document.createElement('img')
+    img.setAttribute('src',
+      'https://images.unsplash.com/photo-1488015795646-7e22a773d72a?ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80')
+    document.querySelector('.container').appendChild(img)
+  </script>
+</body>
+
 </html>
