@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Workshop: innerHTML, textContent</title>
-  </head>
-  <body>
-    <p class="apple">apple</p>
-    <p class="balloon">banana</p>
-    <p class="cat">car</p>
-    <p class="animals">goat rabbit <strong>cat</strong> dog</p>
 
-    <!-- You can work in the html or in a separate js file. Like:
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: innerHTML, textContent</title>
+</head>
+
+<body>
+  <p class="apple">apple</p>
+  <p class="balloon">banana</p>
+  <p class="cat">car</p>
+  <p class="animals">goat rabbit <strong>cat</strong> dog</p>
+
+  <!-- You can work in the html or in a separate js file. Like:
 
     <script>
     1)  Fill every paragraph with the last one's content.
@@ -21,5 +23,20 @@
     OR
 
     <script src="content-1.js"></script> -->
-  </body>
+
+  <script>
+    // 1) Fill every paragraph with the last one 's content.
+    const paragraphs = document.querySelectorAll("p");
+    // for (const p of paragraphs) {
+    //   p.textContent += paragraphs[paragraphs.length - 1].textContent;
+    // }
+    // 2) Do the same again, but you should keep the cat strong.
+    const paragraphs2 = document.querySelectorAll("p");
+
+    for (const p of paragraphs2) {
+      p.innerHTML += paragraphs2[paragraphs.length - 1].innerHTML;
+    }
+  </script>
+</body>
+
 </html>
