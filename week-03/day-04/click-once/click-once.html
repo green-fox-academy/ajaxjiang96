@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Workshop: EventListeners</title>
-  </head>
-  <body>
-    <button>Click me</button>
 
-    <!-- You can work in the html or in a separate js file. Like:
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: EventListeners</title>
+</head>
+
+<body>
+  <button>Click me</button>
+
+  <!-- You can work in the html or in a separate js file. Like:
 
     <script>
       Create an event listener which logs the current timestamp to the console once the button is clicked.
@@ -19,5 +21,21 @@
     OR
 
     <script src="one-time-clicker.js"></script> -->
-  </body>
+  <script>
+    // The first way
+    // const onClick = (e) => {
+    //   console.log(new Date());
+    //   e.target.removeEventListener('click', onClick)
+    // }
+    // document.querySelector('button').addEventListener('click', onClick)
+
+    // The second
+    const onClick = (e) => {
+      console.log(new Date());
+      e.target.onclick = null;
+    }
+    document.querySelector('button').onclick = onClick;
+  </script>
+</body>
+
 </html>
