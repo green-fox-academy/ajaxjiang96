@@ -1,0 +1,27 @@
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+ul {
+  border: 1px solid #aaa;
+  padding: 20px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+li {
+  padding: 5px 10px;
+  list-style: none;
+}
+
+li.selected {
+  background: #ccc;
+}
