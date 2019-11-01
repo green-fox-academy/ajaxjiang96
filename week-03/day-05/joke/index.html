@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gimme a joke</title>
+</head>
+
+<body>
+  <div></div>
+  <button>Gimme a joke</button>
+  <script>
+    document.querySelector('button').onclick = () => {
+      const div = document.querySelector('div');
+      fetch('http://api.icndb.com/jokes/random')
+        .then(data => data.json())
+        .then(joke => {
+          const p = document.createElement('p');
+          p.innerText = joke.value.joke;
+          // div.innerHTML = '';
+          div.appendChild(p);
+        })
+        .catch(error => {
+          const p = document.createElement('p');
+          p.innerText = error;
+          p.style.color = 'red'
+          // div.innerHTML = '';
+          div.appendChild(p);
+        })
+    }
+  </script>
+</body>
+
+</html>
