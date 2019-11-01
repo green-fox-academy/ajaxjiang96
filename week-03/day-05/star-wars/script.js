@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
       result.forEach((movie) => {
         console.log(movie);
         const item = document.createElement('li');
-        item.innerText = movie.title;
+        item.innerText = `${movie.title} (${(new Date(movie.release_date)).getFullYear()})`;
         movies.appendChild(item);
       });
     } else {
