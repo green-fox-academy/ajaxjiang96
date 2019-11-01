@@ -1,6 +1,6 @@
 'use strict';
 
-const promise = new Promise(((fulfill, reject) => {
+const promise = new Promise(((fulfill) => {
   // Your solution here
   fulfill('PROMISE VALUE');
 }));
