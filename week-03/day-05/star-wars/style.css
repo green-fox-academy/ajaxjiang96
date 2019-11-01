@@ -1,0 +1,106 @@
+html {
+  font-size: 16px;
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: black;
+  display: flex;
+  /* justify-content: center; */
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+
+.input-group {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#name {
+  display: flex;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #eee;
+  background: #333;
+  color: white;
+  /* min-width: 50vw; */
+  flex: 1;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10vh;
+}
+
+#name:focus {
+  outline: 0;
+  border-color: yellow;
+}
+
+input[type=submit] {
+  display: flex;
+  all: unset;
+  padding: 10px;
+  color: #333;
+  background: yellow;
+  flex: 0.1;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  margin: 20px 0;
+}
+
+.result {
+  border: 2px solid yellow;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.names {
+  border-right: 1px solid yellow;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movies {
+  border-left: 1px solid yellow;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.result>ul {
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+li:hover {
+  cursor: pointer;
+  background: yellow;
+  color: #333;
+}
+
+li.selected {
+  background: yellow;
+  color: #333;
+}
