@@ -1,0 +1,60 @@
+html {
+  font-size: 16px;
+  color: white;
+}
+
+body {
+  background: black;
+  display: flex;
+  /* justify-content: center; */
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#keyword {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #eee;
+  background: #333;
+  color: white;
+  min-width: 50vw;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10vh;
+}
+
+#keyword:focus {
+  outline: 0;
+  border-color: limegreen;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 30%;
+  object-fit: contain;
+  border: 2px solid black;
+}
+
+img.original {
+  width: 100%;
+  max-width: unset;
+}
+
+.clickable {
+  cursor: pointer;
+}
