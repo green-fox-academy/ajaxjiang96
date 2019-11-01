@@ -4,7 +4,6 @@ const apiKey = 'PHEGoMjOPZjnu3ytS23a60ZEF95hSd2a';
 const URL = 'https://api.giphy.com/v1/gifs/search';
 
 window.addEventListener('load', () => {
-
   function openImg(e) {
     console.log(e.target.dataset);
     document.querySelector('.result').innerHTML = '';
