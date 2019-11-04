@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ListItem from './Item';
+import DoneToDo from './DoneToDo';
+import ToDo from './ToDo';
 
 class App extends React.Component {
   constructor(props) {
@@ -56,13 +56,20 @@ class App extends React.Component {
         <section>
           <h1>TODOS:</h1>
           <ul>
-            {todo.sort((a, b) => a.prio - b.prio).map((item) => <ListItem content={item.text} action={() => this.done(item)} />)}
+            {todo.sort((a, b) => a.prio - b.prio)
+              .map((item) => <ToDo content={item.text} action={() => this.done(item)} />)}
           </ul>
         </section>
         <section>
           <h1>DONE TODOS:</h1>
           <ul>
-            {doneTodo.sort((a, b) => a.prio - b.prio).map((item) => <ListItem content={item.text} done action={() => this.delete(item)} />)}
+            {doneTodo.sort((a, b) => a.prio - b.prio)
+              .map((item) => (
+                <DoneToDo
+                  content={item.text}
+                  action={() => this.delete(item)}
+                />
+              ))}
           </ul>
         </section>
       </div>
