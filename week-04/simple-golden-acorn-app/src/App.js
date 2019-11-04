@@ -9,7 +9,7 @@ class App extends React.Component {
     };
   }
 
-  eat() {
+  handleDecrease() {
     const { acorns } = this.state;
     if (acorns > 0) {
       this.setState(
@@ -18,7 +18,7 @@ class App extends React.Component {
     }
   }
 
-  buy() {
+  handleIncrement() {
     const { acorns } = this.state;
     this.setState(
       { acorns: acorns + 1 },
@@ -30,9 +30,9 @@ class App extends React.Component {
     const { acorns } = this.state;
     return (
       <div className="App">
-        <button className="buy-button" type="button" onClick={this.buy.bind(this)}>Buy one</button>
+        <button className="buy-button" type="button" onClick={this.handleIncrement.bind(this)}>Buy one</button>
         <p>{acorns}</p>
-        <button className="eat-button" type="button" onClick={this.eat.bind(this)}>Eat one</button>
+        <button className="eat-button" type="button" onClick={this.handleDecrease.bind(this)}>Eat one</button>
       </div>
     );
   }
