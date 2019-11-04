@@ -9,6 +9,10 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.addEventListener('keyup', this.handleKeyUp.bind(this));
+  }
+
   handleDecrease() {
     const { acorns } = this.state;
     if (acorns > 0) {
@@ -23,6 +27,18 @@ class App extends React.Component {
     this.setState(
       { acorns: acorns + 1 },
     );
+  }
+
+  handleKeyUp(e) {
+    switch (e.code) {
+      case 'ArrowUp':
+        this.handleIncrement();
+        break;
+      case 'ArrowDown':
+        this.handleDecrease();
+        break;
+      default:
+    }
   }
 
 
