@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Button from './Button';
+import Display from './Display';
 
 class App extends React.Component {
   constructor(props) {
@@ -7,10 +9,14 @@ class App extends React.Component {
     this.state = {
       acorns: 0,
     };
+
+    this.handleDecrease = this.handleDecrease.bind(this);
+    this.handleIncrement = this.handleIncrement.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   componentDidMount() {
-    document.addEventListener('keyup', this.handleKeyUp.bind(this));
+    document.addEventListener('keyup', this.handleKeyUp);
   }
 
   handleDecrease() {
@@ -46,9 +52,9 @@ class App extends React.Component {
     const { acorns } = this.state;
     return (
       <div className="App">
-        <button className="buy-button" type="button" onClick={this.handleIncrement.bind(this)}>Buy one</button>
-        <p>{acorns}</p>
-        <button className="eat-button" type="button" onClick={this.handleDecrease.bind(this)}>Eat one</button>
+        <Button text="Buy one" action={this.handleIncrement} />
+        <Display content={acorns} />
+        <Button text="Eat one" action={this.handleDecrease} />
       </div>
     );
   }
