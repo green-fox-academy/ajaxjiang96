@@ -53,7 +53,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Button text="Buy one" action={this.handleIncrement} />
-        <Display content={acorns} />
+        <Display>{acorns}</Display>
         <Button text="Eat one" action={this.handleDecrease} />
       </div>
     );

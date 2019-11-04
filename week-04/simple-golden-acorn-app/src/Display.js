@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = ({ content }) => <p>{content}</p>;
+const Display = ({ children }) => <p>{children}</p>;
 
 Display.propTypes = {
-  content: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default Display;
