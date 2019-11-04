@@ -57,7 +57,7 @@ class App extends React.Component {
           <h1>TODOS:</h1>
           <ul>
             {todo.sort((a, b) => a.prio - b.prio)
-              .map((item) => <ToDo content={item.text} action={() => this.done(item)} />)}
+              .map((item) => <ToDo key={item.text.toLowerCase().split(' ').join('-')} content={item.text} action={() => this.done(item)} />)}
           </ul>
         </section>
         <section>
@@ -66,6 +66,7 @@ class App extends React.Component {
             {doneTodo.sort((a, b) => a.prio - b.prio)
               .map((item) => (
                 <DoneToDo
+                  key={item.text.toLowerCase().split(' ').join('-')}
                   content={item.text}
                   action={() => this.delete(item)}
                 />
