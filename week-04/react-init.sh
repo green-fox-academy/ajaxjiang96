@@ -35,5 +35,4 @@ echo '{
 }' > .eslintrc.json
 
 echo "[React Init] Finished setup";
-echo "[React Init] pwd: ";
-pwd;
+
