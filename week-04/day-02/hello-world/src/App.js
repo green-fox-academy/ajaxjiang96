@@ -26,6 +26,7 @@ function App() {
             </p>
           )}
         />
+        <Route render={() => <p>This page is not implemented yet</p>} />
       </Switch>
     </Router>
   );
