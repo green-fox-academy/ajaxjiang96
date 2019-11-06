@@ -95,7 +95,11 @@ class App extends React.Component {
     return (
       <>
         <header>
-          <h1>China News</h1>
+          <h1>
+            {country.toUpperCase()}
+            {' '}
+            News
+          </h1>
           <hr />
         </header>
 
