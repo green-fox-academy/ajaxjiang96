@@ -1,0 +1,39 @@
+.listItem {
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  line-height: 2.2;
+  color: #b8b8b8;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.done {
+  opacity: 0.3;
+}
+
+.done {
+  opacity: 0.3;
+}
+
+.listItem button {
+  all: unset;
+  transition: color 0.5s ease-in-out;
+}
+
+.listItem button:hover {
+  cursor: pointer;
+}
+
+.listItem button.finished {
+  color: #DF64E8
+}
+
+.listItem button+button {
+  margin-left: 10px;
+}
+
+.listText {
+  transition: opacity 0.5s ease-in-out
+}
