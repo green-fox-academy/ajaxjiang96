@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { addTag } from '../redux/Tag/actionCreators';
+import InputGroup from './InputGroup';
 
 const AddTag = ({ addNewTag }) => {
-  const [value, setValue] = useState('');
-
-  const clickHandler = () => {
+  const clickHandler = (value) => {
     if (value) value.split(',').filter((tag) => tag !== '').forEach(addNewTag);
-    setValue('');
   };
 
   return (
     <section>
       <h1>Add Tag</h1>
-      <input value={value} onChange={(event) => setValue(event.target.value)} />
-      <button type="button" onClick={clickHandler}>Add</button>
+      <InputGroup onClick={clickHandler} buttonText="Add" />
     </section>
   );
 };
