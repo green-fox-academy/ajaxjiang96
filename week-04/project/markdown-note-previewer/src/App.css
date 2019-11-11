@@ -1,0 +1,88 @@
+div {
+  display: flex;
+  /* border: 1px solid #eee; */
+}
+
+nav,
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+
+nav>a,
+nav>button {
+  all: unset;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+nav>a:hover,
+nav>button:hover {
+  cursor: pointer;
+  background: #eee;
+}
+
+main {
+  flex: 2;
+  border: 1px solid #eee;
+  margin-left: 20px;
+}
+
+
+textarea,
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+textarea {
+  font-size: 1rem;
+  resize: none;
+  border-radius: 5;
+}
+
+textarea,
+main {
+  padding: 20px;
+  overflow-y: scroll;
+  border: 1px solid #eee;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.editor {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.container {
+  flex-direction: row;
+  height: 90vh;
+  width: 80vw;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.toolBar {
+  padding: 10px;
+  background: #eee;
+}
+
+article img {
+  width: 100%;
+}
