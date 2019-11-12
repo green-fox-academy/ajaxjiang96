@@ -1,0 +1,132 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+section,
+form,
+input,
+label,
+button,
+span,
+select {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  align-items: center;
+}
+
+form {
+  width: 355px;
+  padding: 20px;
+}
+
+label {
+  font-weight: bolder;
+}
+
+label+label {
+  margin-top: 20px;
+}
+
+.checkbox.label,
+.radio.label {
+  font-weight: normal;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.checkbox.label>input,
+.radio.label>input {
+  display: inline;
+  margin: initial;
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  all: unset;
+  color: white;
+  background: black;
+  text-align: center;
+  border-radius: 100vw;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+select {
+  all: unset
+}
+
+input,
+span,
+select,
+textarea {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+span {
+  background: pink;
+  color: palevioletred;
+  border: 2px solid palevioletred;
+  box-shadow: 0px 3px 6px rgba(216, 112, 147, 0.32);
+  border-radius: 3px;
+}
+
+input.error,
+select.error {
+  border: 2px solid palevioletred;
+
+}
+
+table {
+  border: .5px solid #eee;
+  border-spacing: 0;
+}
+
+td,
+tfoot {
+  border: .5px solid #eee;
+  padding: 10px;
+}
+
+th {
+  background: #eee;
+  padding: 10px;
+}
+
+thead {
+  border-radius: 3px 3px 0px 0px;
+}
