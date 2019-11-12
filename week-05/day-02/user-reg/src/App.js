@@ -2,11 +2,11 @@ import React from 'react';
 import RegistrationForm from './RegistrationForm';
 
 function App() {
-  const addAttendee = console.log;
+  const signup = console.log;
 
   return (
     <>
-      <RegistrationForm onSubmit={addAttendee} />
+      <RegistrationForm onSubmit={signup} />
     </>
   );
 }
