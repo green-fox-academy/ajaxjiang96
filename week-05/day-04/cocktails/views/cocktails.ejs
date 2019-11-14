@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cocktails</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+  <h1>Cocktails <% if (alcohol) {%>with <%=alcohol %><% } %></h1>
+  <%- include('nav', {alcoholList}) %>
+  <table>
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>PRICE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let cocktail of cocktails) { %>
+      <% if (!alcohol || cocktail.contains.indexOf(alcohol) !== -1) { %>
+      <tr>
+        <td>
+          <p class="name"><%=cocktail.name %>
+            <% if (!cocktail.isAlcoholic) { %>
+            <span class='non-alcoholic'> (non-alcoholic)</span>
+            <%}%>
+          </p>
+          <p class="ingredients">
+            <% for (let ingredient of cocktail.contains) {%>
+            <span class="<%= ingredient === alcohol ? 'match' :'' %>"><%=ingredient %></span>,
+            <% } %>
+          </p>
+        </td>
+        <td class="price">
+          <%=cocktail.price %>
+        </td>
+      </tr>
+      <% } %>
+      <% } %>
+    </tbody>
+  </table>
+
+</body>
+
+</html>
