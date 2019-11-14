@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include partials/head %>
+
+<body>
+  <!-- {
+  city: 'Seattle',
+  location: 'Washington, United States',
+  weather: [
+  { temp: 11, icon: 'cloudy', message: 'Complete Grey' },
+  { temp: 11, icon: 'cloudy', message: 'Just stay in bed.' },
+  { temp: 13, icon: 'cloudy', message: 'Meh...' },
+  { temp: 12, icon: 'cloudy', message: 'Still meh...' },
+  { temp: 13, icon: 'partly_cloudy', message: 'Not too sunny.' },
+  ],
+  }, -->
+  <% for (forecast of forecasts) { %>
+  <a href="cities/<%= forecast.city%>">
+    <section>
+      <div class="city-info">
+        <h1 class="city-name"><%= forecast.city%></h1>
+        <h2 class="city-location"><%= forecast.location %></h2>
+      </div>
+      <div class="weather-info">
+        <div class="weather-temp">
+          <%= forecast.weather[0].temp %>&#8451;
+        </div>
+        <div class="weather-icon">
+          <img src="/static/assets/<%= forecast.weather[0].icon %>.png" alt="<%= forecast.weather[0].icon %>">
+        </div>
+      </div>
+    </section>
+  </a>
+  <% } %>
+
+</body>
+
+</html>

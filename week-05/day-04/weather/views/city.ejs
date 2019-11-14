@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include partials/head %>
+
+<body>
+  <h1><%= city %></h1>
+  <div class="row">
+
+    <% for (let daily of weather) { %>
+    <section class="col">
+      <div class="weather-icon">
+        <img src="/static/assets/<%= daily.icon %>.png" alt="<%= daily.icon %>">
+      </div>
+      <div class="weather-temp">
+        <%= daily.temp %>&#8451;
+      </div>
+
+      <div class="weather-message">
+        <%= daily.message %>
+      </div>
+    </section>
+    <% } %>
+
+  </div>
+
+
+
+</body>
+
+</html>
