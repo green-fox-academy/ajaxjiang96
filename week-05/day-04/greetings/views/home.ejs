@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Welcome back, <%= name %></title>
+  <title>Welcome back, <%= name||'Guest'  %></title>
 </head>
 
 <body>
-  <% if (name) { %>
-  <h1>Welcome back, <%= name %>!</h1>
-  <% } %>
+  <h1>Welcome back, <%= name||'Guest' %>!</h1>
+
 
 </body>
 
