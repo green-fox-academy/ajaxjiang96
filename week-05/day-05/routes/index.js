@@ -1,4 +1,5 @@
 const { sith } = require('./sith');
+const { translate } = require('./translate');
 
 module.exports = {
   doubling: (req, res) => {
@@ -111,4 +112,5 @@ module.exports = {
   },
 
   sith,
+  translate,
 };

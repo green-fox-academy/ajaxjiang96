@@ -20,5 +20,6 @@ app.get('/appenda/:appendable', routes.appenda);
 app.post('/dountil/:action', routes.doUntil);
 app.post('/arrays', routes.arrays);
 app.post('/sith', routes.sith);
+app.post('/translate', routes.translate);
 
 app.listen(PORT, () => console.log(`App listening on PORT: ${PORT}`));
