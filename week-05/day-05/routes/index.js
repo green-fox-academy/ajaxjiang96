@@ -1,3 +1,5 @@
+const { sith } = require('./sith');
+
 module.exports = {
   doubling: (req, res) => {
     const { input } = req.query;
@@ -107,4 +109,6 @@ module.exports = {
       result,
     });
   },
+
+  sith,
 };
