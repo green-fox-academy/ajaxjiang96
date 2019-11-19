@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include partials/head %>
+
+<body>
+  <h1>Users</h1>
+  <h2>Warning: Your uploads will overwrite all the existing users</h2>
+  <form action="/users" method="post" enctype="multipart/form-data">
+    <label for="csv">Upload User CSV</label>
+    <input type="file" name="csv" id="csv">
+    <input type="submit" value="Upload">
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          Prefix
+        </th>
+        <th>
+          First Name
+        </th>
+        <th>
+          Last Name
+        </th>
+        <th>
+          Address
+        </th>
+        <th>
+          Height
+        </th>
+        <th>
+          BitCoin Address
+        </th>
+        <th>
+          Color Preference
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let {user_id, prefix, first_name, last_name, address, height, bitcoin_address, color_preference} of users) { %>
+      <tr>
+        <td><%= user_id %></td>
+        <td><%= prefix %></td>
+        <td><%= first_name %></td>
+        <td><%= last_name %></td>
+        <td><%= address %></td>
+        <td><%= height %></td>
+        <td><%= bitcoin_address %></td>
+        <td style="color:<%= color_preference || '' %>;"><%= color_preference %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+
+</html>
