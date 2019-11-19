@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include partials/head %>
+
+<body>
+  <h1>Books</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Author
+        </th>
+        <th>
+          Category
+        </th>
+        <th>
+          Publisher
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let {title, author, category, publisher, price} of books) { %>
+      <tr>
+        <td><%= title %></td>
+        <td><%= author %></td>
+        <td><%= category %></td>
+        <td><%= publisher %></td>
+        <td><%= price %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+
+</html>
