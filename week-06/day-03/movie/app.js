@@ -30,7 +30,6 @@ const getMovie = (req, res) => {
   res.statusCode = 200;
   res.setHeader('content-type', 'application/json');
   const result = movies.find((movie) => movie.id === movieId);
-  console.log(result)
   res.statusCode = result ? 200 : 404;
   res.end(JSON.stringify(result));
 };
