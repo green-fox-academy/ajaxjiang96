@@ -5,7 +5,7 @@ echo "[React Init] Installing prop-types";
 cd $1
 yarn add prop-types
 echo "[React Init] Setting up ESLint";
-yarn add -D eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
+yarn add -D eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks redux react-redux
 echo '{
     "env": {
         "browser": true,
