@@ -27,7 +27,6 @@ const bodyParser = async (req) => new Promise((resolve, reject) => {
 const getMovie = (req, res) => {
   console.log(req.params, movies);
   const { movieId } = req.params;
-  res.statusCode = 200;
   res.setHeader('content-type', 'application/json');
   const result = movies.find((movie) => movie.id === movieId);
   res.statusCode = result ? 200 : 404;
@@ -82,6 +81,21 @@ const createMovie = async (req, res) => {
   res.end();
 };
 
+const deleteMovie = (req, res) => {
+  if (req.headers.authorization !== 'top-secret') throw new Error('permission');
+  const { movieId } = req.params;
+  res.setHeader('content-type', 'application/json');
+  const index = movies.findIndex((movie) => movie.id === movieId);
+  let result;
+  if (index < 0) {
+    res.statusCode = 404;
+  } else {
+    result = movies.splice(index, 1);
+    res.statusCode = 200;
+  }
+  res.end(JSON.stringify(result));
+};
+
 const requestHandler = (req, res) => {
   const reqUrl = url.parse(req.url, true);
   // console.log(reqUrl);
@@ -105,6 +119,18 @@ const requestHandler = (req, res) => {
           getMovie(req, res);
         } else {
           getMovies(req, res);
+        }
+      } else if (req.method === 'DELETE') {
+        const urlTokens = reqUrl.pathname.split('/');
+        if (urlTokens.length > 2) {
+          const movieId = parseInt(urlTokens[2], 10);
+          req.params = {
+            movieId,
+          };
+          deleteMovie(req, res);
+        } else {
+          res.statusCode = 400;
+          return res.end();
         }
       } else {
         methodNotAllowed(req, res);
