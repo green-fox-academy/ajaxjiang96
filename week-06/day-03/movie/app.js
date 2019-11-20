@@ -52,7 +52,6 @@ const createMovie = async (req, res) => {
 
   try {
     const body = await bodyParser(req);
-    console.log(body);
     if (!body.title) {
       throw new Error('bad request');
     } else if (movies.findIndex((movie) => movie.title === body.title) >= 0) {
@@ -81,6 +80,46 @@ const createMovie = async (req, res) => {
   res.end();
 };
 
+const updateMovie = async (req, res) => {
+  if (req.headers.authorization !== 'top-secret') throw new Error('permission');
+  const { movieId } = req.params;
+  try {
+    const body = await bodyParser(req);
+    if (!body.title || !body.genre || !body.id || !movieId || body.id !== movieId) {
+      throw new Error('bad request');
+    } else {
+      const i = movies.findIndex((movie) => movie.id === movieId);
+      if (i < 0) {
+        throw new Error('notfound');
+      }
+      movies[i] = {
+        ...body,
+      };
+      res.setHeader('content-type', 'application/json');
+      res.statusCode = 200;
+      return res.end(JSON.stringify(movies[i]));
+    }
+  } catch (err) {
+    switch (err.message) {
+      case 'duplicate':
+        res.statusCode = 409;
+        break;
+      case 'permission':
+        res.statusCode = 403;
+        break;
+      case 'notfound':
+        res.statusCode = 404;
+        break;
+      case 'bad request':
+        res.statusCode = 400;
+        break;
+      default:
+        res.statusCode = 500;
+    }
+  }
+  return res.end();
+};
+
 const deleteMovie = (req, res) => {
   if (req.headers.authorization !== 'top-secret') throw new Error('permission');
   const { movieId } = req.params;
@@ -96,6 +135,7 @@ const deleteMovie = (req, res) => {
   res.end(JSON.stringify(result));
 };
 
+// eslint-disable-next-line consistent-return
 const requestHandler = (req, res) => {
   const reqUrl = url.parse(req.url, true);
   // console.log(reqUrl);
@@ -128,6 +168,18 @@ const requestHandler = (req, res) => {
             movieId,
           };
           deleteMovie(req, res);
+        } else {
+          res.statusCode = 400;
+          return res.end();
+        }
+      } else if (req.method === 'PUT') {
+        const urlTokens = reqUrl.pathname.split('/');
+        if (urlTokens.length > 2) {
+          const movieId = parseInt(urlTokens[2], 10);
+          req.params = {
+            movieId,
+          };
+          updateMovie(req, res);
         } else {
           res.statusCode = 400;
           return res.end();
