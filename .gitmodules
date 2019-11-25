@@ -4,3 +4,6 @@
 [submodule "week-05/day-03/jsa-chatroom-client"]
 	path = week-05/day-03/jsa-chatroom-client
 	url = https://github.com/ajaxjiang96/jsa-chatroom-client
+[submodule "week-06/day-04/todo"]
+	path = week-06/day-04/todo
+	url = https://github.com/ajaxjiang96/todo.git
